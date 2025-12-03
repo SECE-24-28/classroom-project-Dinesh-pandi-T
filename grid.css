@@ -1,0 +1,102 @@
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "head head head" "navbar mainContent Aside" "Footer Footer Footer";
+}
+
+header{
+    grid-area: head;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+nav{
+    grid-area: navbar;
+    background-color: green;
+    color: yellow;
+    border: 1px solid;
+}
+main{
+    grid-area: Aside;
+    background-color: blue;
+    color: green;
+    border: 1px solid
+}
+aside{
+    grid-area:Footer;
+    background-color: black;
+    color:white;
+    border: 1px solid;
+}
+footer{
+    grid-area:Footer;
+    background-color: black;
+    color:white;
+    padding:10px;
+}
+.flexItem{
+    background-color: yellow;
+    border: 2px solid red;
+    color:red;
+    width:100px;
+    margin:20px;
+    height:100px;
+    font-size: 24px;
+    
+}
+.flexItem:hover{
+    transform:translateX(-10px);
+    /*transform: trnaslateX(10px); */
+}
+
+/* 576 less than 576 for mobiles */
+/* 768 between 577px-768px tabs */
+/* 1200ppx between 993px-1200px normal screens */
+/* 1200px greater than 1200px for Extra large screens */
+
+@media (max-width:576px){
+    body{
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+          "head head"
+           "navbar mainContent"
+           "Footer Footer";
+    }
+    aside{
+        display: none;
+    }
+    .flexItem{
+        font-size: 14px;
+        height: 50px;
+        width: 50px;
+    }
+    main{
+        background-color: red;
+    }
+}
+
+@media(min-width:577px) and (max-width:768px){
+    body{
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+          "head head head"
+           "mainContent Aside"
+           "Footer Footer";
+    }
+    nav{
+        display: none;
+    }
+}
+
+@media(min-width:769px) and (max-width:992px){
+    body{
+        
+        grid-template-areas:
+          "head head head"
+           "Aside mainContent navbar"
+           "Footer Footer Footer";
+    }
+}

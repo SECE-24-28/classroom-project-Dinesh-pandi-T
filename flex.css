@@ -1,0 +1,38 @@
+.flexContainer{
+    border: 1px solid red;
+    display: flex;
+    height: 90vh;
+    /*justify-content:center;*/
+   /* align-items: center;*/
+   /* gap: 10px;
+    flex-direction: column-reverse;*/
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;/*nowrap,wrap-reverse*/
+    /*align-content: center; /* this for align of the flex with wrap*/
+}
+/* flex-start,center,space-around,s
+pace-between,space-evenly*/
+
+.flexItem{
+    background-color: yellow;
+    border: 2px solid red;
+    color: red;
+    font-size: 24px;
+    height: 60px;
+    width: 80px;
+}
+/*Value of flex direction
+Row,row-reverse,column,column-reverse
+align items:flex-start,flex-end,center,base line*/
+
+ .flexItem:nth-child(1){
+    order: 1;
+    align-self:flex-start;
+} 
+
+.flexItem:nth-child(6){
+    order: -1;
+   align-self:flex-end ;
+}
+
